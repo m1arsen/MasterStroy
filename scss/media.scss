@@ -1,0 +1,440 @@
+.none {
+  display: none;
+}
+
+@media (max-width: 1150px) {
+
+  .header__section {
+    display: none;
+  }
+
+  .catalog {
+    &__items {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .about-us {
+    &__title {
+      margin-bottom: 15px;
+      font-size: 30px;
+    }
+
+    &__subtitle {
+      margin-bottom: 15px;
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    &__text {
+      margin-bottom: 23px;
+    }
+  }
+
+  .top-products {
+
+    &__container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__prices-color {
+      margin-bottom: 10px;
+    }
+
+    &__img {
+      height: 150px;
+    }
+
+  }
+
+  .our-works__photos-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 1020px) {
+  .nav__link {
+    padding: 25px 10px;
+  }
+
+  .about-us {
+
+    &__pic {
+      display: none;
+    }
+
+    &__info {
+      max-width: 70%;
+      padding: 50px 0;
+    }
+  }
+
+  .about-manufacture__info {
+    margin-right: 0;
+  }
+
+}
+
+@media (max-width: 925px) {
+  .about-manufacture__info {
+    margin-bottom: 35px;
+  }
+}
+
+@media (max-width: 870px) {
+
+  .main,
+  .catalog,
+  .top-products,
+  .about-manufacture,
+  .our-works,
+  .our-benefits {
+    &__title {
+      font-size: 30px;
+      line-height: 35px;
+    }
+  }
+
+
+  .nav {
+    &-btn {
+
+      &-open {
+        display: block;
+      }
+
+      &-close {
+        display: block;
+      }
+
+    }
+
+    &__nav-bar {
+      display: none;
+    }
+
+
+  }
+
+  .nav__nav-bar {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 1;
+    padding: 50px 40px;
+    transition: all .2s ease-in;
+    transform: translateX(100%);
+
+    &-active {
+      transform: translateX(0);
+    }
+  }
+
+
+
+  .nav-btn-close {
+    position: absolute;
+    top: 23px;
+    right: 15px;
+  }
+
+  .nav.open .nav__link {
+    font-size: 34px;
+    font-weight: 500;
+  }
+
+  .main {
+
+    &__title {
+      margin: 0 auto 10px;
+      max-width: 610px;
+    }
+
+    &__text {
+      margin: 0 auto 22px;
+      max-width: 610px;
+    }
+
+    &__wrapper  {
+      padding: 80px 15px;
+    }
+
+  }
+
+  .catalog {
+    padding: 70px 0;
+
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+  }
+
+  .top-products {
+    padding: 70px 0;
+
+    &__title {
+      margin-bottom: 40px;
+    }
+
+    &__container {
+      grid-template-columns: repeat(1, 400px);
+    }
+  }
+
+  .about-manufacture {
+    padding: 70px 0;
+
+    &__title {
+      margin-bottom: 40px;
+    }
+  }
+
+  .our-works {
+    padding: 70px 0;
+
+    &__title {
+      margin-bottom: 40px;
+    }
+
+    &__text {
+      margin-bottom: 40px;
+    }
+
+    &__photo-container {
+      max-width: 300px;
+    }
+  }
+
+  .our-benefits {
+    padding: 70px 0;
+
+    &__title {
+      margin-bottom: 40px;
+    }
+
+    &__container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .footer {
+
+    &__nav {
+      column-gap: 50px;
+    }
+
+    &__info {
+      margin-bottom: 20px;
+    }
+
+  }
+
+}
+
+@media (max-width: 660px) {
+
+  .main,
+  .catalog,
+  .top-products,
+  .about-manufacture,
+  .our-works,
+  .our-benefits {
+    &__title {
+      font-size: 25px;
+    line-height: 30px;
+    }
+  }
+
+  .our-works {
+    &__photos-container, &__photos-container:last-child {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+}
+
+@media (max-width: 540px) {
+
+  .about-us {
+    flex-direction: column;
+    &__pic {
+      display: block;
+    }
+
+  }
+
+  .btn {
+    padding: 16px 60px;
+  }
+
+  .catalog__items {
+    margin: 35px auto;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 20px;
+  }
+
+  .our-benefits {
+
+    &__container {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 30px;
+    }
+
+    &__benefit-card {
+      max-width: 290px;
+    }
+
+    &__pic {
+      margin-bottom: 20px;
+    }
+  }
+
+  .footer {
+
+    &__wrapper {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__info {
+      text-align: center;
+
+      &-ico {
+        margin-right: 10px;
+      }
+
+      &-title {
+        margin-bottom: 5px;
+      }
+
+      &-subtitle {
+        margin-bottom: 5px;
+      }
+
+      &-item {
+        margin: 0 auto 5px;
+
+      }
+    }
+
+    &__nav {
+      flex-direction: column;
+      row-gap: 20px;
+
+      &-title {
+        margin-bottom: 5px;
+      }
+
+      &-item {
+        margin-bottom: 10px;
+      }
+    }
+
+  }
+
+  .about-us__btn {
+    display: block;
+    width: min-content;
+    margin: 0 auto;
+  }
+
+}
+
+@media (max-width: 460px) {
+
+  .nav.open .nav__link {
+    padding: 15px 10px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .about-us__info {
+    max-width: 85%;
+    padding: 30px 0;
+  }
+
+  .catalog,
+  .top-products,
+  .about-manufacture,
+  .our-works,
+  .our-benefits,
+  .footer {
+    padding: 40px 0;
+  }
+
+  .top-products {
+
+    &__container {
+      grid-template-columns: repeat(1, 300px);
+    }
+
+    &__prices-colors {
+      margin-left: 7px;
+    }
+
+    &__info-colors {
+      &_grey,
+      &_red,
+      &_peru,
+      &_brown,
+      &_crimson,
+      &_dark-grey,
+      &_orange,
+      &_dark {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .about-manufacture {
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__logo-bg {
+      transform: scale(.9);
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+      text-align: center;
+    }
+
+    &__item-icon {
+      margin-right: 0;
+    }
+
+  }
+
+
+}
+
+@media (max-width: 320px) {
+
+  .main,
+  .catalog,
+  .top-products,
+  .about-manufacture,
+  .our-works,
+  .our-benefits {
+    &__title {
+      font-size: 20px;
+    line-height: 25px;
+    }
+  }
+
+}
