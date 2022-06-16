@@ -47,10 +47,6 @@
 
   }
 
-  .our-works__photos-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
 }
 
 @media (max-width: 1020px) {
@@ -253,10 +249,12 @@
     }
   }
 
-  .our-works {
-    &__photos-container, &__photos-container:last-child {
-      grid-template-columns: repeat(1, 1fr);
-    }
+  .our-works__photos-slider {
+    padding: 0 42px;
+  }
+
+  .slick-dots li{
+    margin: 0 7px;
   }
 
 }
@@ -351,6 +349,10 @@
 
 @media (max-width: 460px) {
 
+  .our-works__photos-slider {
+    padding: 0;
+  }
+
   .nav.open .nav__link {
     padding: 15px 10px;
     font-size: 20px;
@@ -435,6 +437,10 @@
       font-size: 20px;
     line-height: 25px;
     }
+  }
+
+  .slick-dots li{
+    margin: 0 5px;
   }
 
 }
