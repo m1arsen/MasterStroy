@@ -119,7 +119,7 @@ body {
 
 .nav {
   &-btn {
-    
+
     &-open {
       display: none;
     }
@@ -544,6 +544,7 @@ body {
     text-align: center;
     color: #000000;
   }
+
   &__text {
     margin-bottom: 80px;
     font-size: 12px;
@@ -551,29 +552,86 @@ body {
     text-align: center;
     color: #000000;
   }
-  &__photos-container {
+
+  &__photos-slider {
     margin: 0 auto 40px;
-    width: min-content;
+    padding: 0 45px;
+    position: relative;
+    max-width: 710px;
 
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 30px;
-    row-gap: 40px;
-
-    &:last-child {
-      grid-template-columns: repeat(2, 1fr);
+    .slick-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      font-size: 0;
+      width: 42px;
+      height: 68px;
+      border: 0;
+      opacity: .9;
     }
+
+    .slick-arrow.slick-prev{
+      left: 0;
+      background: url(./../img/icons/left-arrow.svg) center no-repeat;
+      background-size: cover;
+    }
+
+    .slick-arrow.slick-next{
+      right: 0;
+      background: url(./../img/icons/right-arrow.svg) center no-repeat;
+    }
+
+    li {
+      max-width: 300px;
+      margin: 0 10px;
+      list-style: none;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .slick-track {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .slick-list {
+      overflow: hidden;
+    }
+
+    .slick-dots{
+      margin-top: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .slick-list {
+      overflow: hidden;
+    }
+
+    .slick-dots button{
+      display: flex;
+      align-items: center;
+      font-size: 0;
+      border: 0;
+      width: 10px;
+      height: 12px;
+      background: url(./../img/icons/dots.svg) no-repeat center;
+      background-size: cover;
+      opacity: .6;
+    }
+
+    .slick-dots li.slick-active button {
+      opacity: 1;
+    }
+
   }
 
-  &__photo-container {
-    width: 330px;
-  }
 
-  &__photo {
-    cursor: pointer;
-    border-radius: 30px;
-    width: 100%;
-  }
+
 }
 
 .our-benefits {

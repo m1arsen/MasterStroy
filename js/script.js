@@ -68,3 +68,34 @@ document.querySelectorAll('a[href^="#"').forEach(link => {
       });
   });
 });
+
+// Sliders
+
+$(document).ready(function(){
+  $('.our-works__photos-slider').slick({
+    arrows:true,
+    dots:true,
+    slidesToShow:2,
+    slidesToScroll:1,
+    initialSlide:1,
+    waitForAnimate:false,
+    speed: 300,
+    responsive: [
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 1,
+          arrows:false,
+          centerMode:true
+        }
+      },{
+        breakpoint: 500,
+        settings: {
+          centerMode:true,
+          slidesToShow: 1,
+          arrows:false
+        }
+      }
+    ]
+  });
+});
